@@ -19,7 +19,6 @@
   flex-direction: column;
 }
 
-
 .App .Steps .steps-content{
   display: flex;
   justify-content: space-between;
@@ -30,6 +29,26 @@
   padding: 10px;
   margin: 10px 0;
   box-shadow: 0px 0px 2px;
+}
+
+.Content .row{
+  flex-direction: row;
+  flex: 1;
+  display: flex;
+  margin: 5px 0;
+}
+
+.row span {
+  flex: 9
+}
+
+.row div {
+  display: inline-block;
+  flex: 2;
+}
+
+.row > div > span {
+  margin: 0 10px;
 }
 
 .App .Steps .steps-action{

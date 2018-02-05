@@ -1,6 +1,9 @@
 var express = require('express');
 var data = require('./data')
-var app = express();
+var cors = require('cors')
+var app = express()
+
+app.use(cors())
 
 app.get('/movies', function (req, res) {
   res.setHeader('Content-Type', 'application/json');

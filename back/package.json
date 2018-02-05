@@ -6,6 +6,7 @@
   "author": "Ignacio Ureta <ignacio.ureta@live.com>",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "nodemon": "^1.14.12"
   },
