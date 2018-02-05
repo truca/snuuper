@@ -1,0 +1,16 @@
+{
+  "name": "snuuper-back",
+  "version": "1.0.0",
+  "description": "snuuper back",
+  "main": "index.js",
+  "author": "Ignacio Ureta <ignacio.ureta@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.14.12"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  }
+}
