@@ -31,13 +31,17 @@ class Content extends Component {
     return (
       <div className="Content">
         {elements && elements.map((elem, i) => {
+          let amount = this.props.cart[`${this.props.route}:${elem.id}`] || 0
           return (
             <div key={i} className="row">
               <span>{elem.name}</span>
               <div>
                 <Button type="primary" onClick={this.remove.bind(this, elem.id)}>-</Button>                
-                <span>{ this.props.cart[`${this.props.route}:${elem.id}`] || 0 }</span>
+                <span>{ amount }</span>
                 <Button type="primary" onClick={this.add.bind(this, elem.id)}>+</Button>
+              </div>
+              <div className="Subprice" >
+                <span>{`$ ${ amount * elem.price }`}</span>
               </div>
             </div>
           )
