@@ -3,6 +3,7 @@ import Steps from 'antd/lib/steps';
 import Button from 'antd/lib/button';
 import message from 'antd/lib/message';
 import Content from './Content'
+import Checkout from './Checkout'
 
 const steps = [{
   title: 'Movies',
@@ -13,6 +14,9 @@ const steps = [{
 }, {
   title: 'Electronics',
   content: 'electronics',
+}, {
+  title: 'Checkout',
+  content: 'checkout'
 }];
 
 class Pasos extends Component {
@@ -40,7 +44,13 @@ class Pasos extends Component {
             {steps.map(item => <Step key={item.title} title={item.title} />)}
           </Steps>
           <div className="steps-content">
-            <Content route={steps[this.state.current].content} />
+            {this.state.current === steps.length - 1? 
+              <Checkout />
+              : 
+              <Content route={steps[this.state.current].content} />
+
+            }
+            
           </div>
           <div className="steps-action">
             {
